@@ -24,9 +24,9 @@ Template/
 |-- node_modules/               # external modules used in the application
 |-- public/                     # Static files served
 |   `-- bower_components/       # External libraries
-|   `-- css/                    # App css (angular-app/css is bundled and minified to this directory, do __NOT__ modify).
+|   `-- css/                    # App css (angular-app/css is bundled and minified to this directory, do NOT modify).
 |   `-- img/
-|   `-- js/                     # App js (angular-app is bundled and minified to this directory, do __NOT__ modify).
+|   `-- js/                     # App js (angular-app is bundled and minified to this directory, do NOT modify).
 |   `-- views/                  # Contains static html files include angular app views
 |   `-- index.html              # Bootstraps the angular app and asynchronously fetches js scripts.
 |-- server/                     # Server related functionality
