@@ -44,6 +44,14 @@ Template/
 |-- server.js                   # Node server
 ```
 
+Prerequisites
+-------------
+
+1. Install git:
+  `brew install git` or http://git-scm.com/
+2. Install node and npm:
+  `brew install node` or http://nodejs.org/
+
 Installing
 ----------
 
