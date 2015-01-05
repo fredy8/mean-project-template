@@ -1,11 +1,11 @@
 exports.mongo = {
 	development: {
 		connectionString:
-			'mongodb://localhost:27017/test',
+			'mongodb://localhost:27017/test'
 	},
 	production: {
 		connectionString:
-			'',
+			'mongodb://localhost:27017/test'
 	}
 };
 
