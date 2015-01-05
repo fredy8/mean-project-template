@@ -53,6 +53,8 @@ Prerequisites
   `brew install node` or http://nodejs.org/
 3. Install mongodb
   `brew install mongodb` or http://docs.mongodb.org/manual/installation/
+4. Create database directory
+  `sudo mkdir /data/db`
 
 Installing
 ----------
