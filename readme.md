@@ -45,9 +45,9 @@ Installing
 ----------
 
 1. Clone the repository
-  ```git clone https://github.com/fredy8/mean-project-template.git```
+  `git clone https://github.com/fredy8/mean-project-template.git`
 2. Install dependencies
-  ```npm install```
+  `npm install`
 3. Install mongodb
   http://docs.mongodb.org/manual/installation/
 
@@ -55,16 +55,16 @@ Running
 -------
 
 1. Start the database
-  ```sudo mongod```
+  `sudo mongod`
 2. Run the server
-  ```npm start```
+  `npm start`
 
 Testing
 -------
-To run the tests (The server must be running):
-```npm test```
+  `npm test` (the server must be running)
 
 This will first lint all javascript and css files, then run the tests in these order:
+
 1. API tests using mocha
 2. angular unit tests using karma
 3. angular e2e tests using protractor
@@ -75,8 +75,8 @@ Developing
 1. Start the server. (The server is automatically restarted when changes are detected).
 2. Run the watch script:
   ```npm run watch```
-* Every time a file is modified it gets linted to find potential errors.
-* If there were no lint errors, the angular app is bundled and minified to be served statically.
+   * Every time a file is modified it gets linted to find potential errors.
+   * If there were no lint errors, the angular app is bundled and minified to be served statically.
 
 Debugging
 ---------
@@ -85,6 +85,7 @@ When the server is running, just go to http://localhost:8080/debug?port=5858.
 
 ### Frontend
 In chrome, go to View -> Developer Tools
+
 TO DO: No minifying on developer environment
 
 Deploying
