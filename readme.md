@@ -50,7 +50,7 @@ Installing
   ```npm install```
 3. Install mongodb
   http://docs.mongodb.org/manual/installation/
-4. Create
+
 Running
 -------
 
