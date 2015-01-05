@@ -86,8 +86,6 @@ When the server is running, just go to http://localhost:8080/debug?port=5858.
 ### Frontend
 In chrome, go to View -> Developer Tools
 
-TO DO: No minifying on developer environment
-
 Deploying
 ---------
 TO DO
