@@ -55,12 +55,16 @@ Prerequisites
 Installing
 ----------
 
-1. Clone the repository
-  `git clone https://github.com/fredy8/mean-project-template.git`
+1. Clone the repository:
+
+  ```
+  git clone https://github.com/fredy8/mean-project-template.git [my_project_name]
+  cd [my_project_name]
+  ```
 2. Install dependencies
   `npm install`
 3. Install mongodb
-  http://docs.mongodb.org/manual/installation/
+  `brew install mongodb` or http://docs.mongodb.org/manual/installation/
 
 Running
 -------
