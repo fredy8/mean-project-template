@@ -34,7 +34,10 @@ Template/
 |   `-- credentials.js          # Contains server credentials (e.g. db string, cookiesecrect, etc.)
 |   `-- error-handlers.js       # Error routes for the server
 |   `-- error-shutdown.js       # Gracefully shuts down the server when uncaught exceptions occur
-|-- .bowerrc                    # Bower packages definition (front-end third party libraries)
+|-- .bowerrc                    # Bower options
+|-- .csslintrc                  # css linting options
+|-- .jshintrc                   # js linting options
+|-- bower.json                  # Bower packages definition (front-end third party libraries)
 |-- Gruntfile.js                # Grunt tasks definition (task automation)
 |-- package.json                # Specifies project properties and dependencies
 |-- README.md
