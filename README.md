@@ -51,6 +51,8 @@ Prerequisites
   `brew install git` or http://git-scm.com/
 2. Install node and npm:
   `brew install node` or http://nodejs.org/
+3. Install mongodb
+  `brew install mongodb` or http://docs.mongodb.org/manual/installation/
 
 Installing
 ----------
@@ -63,8 +65,6 @@ Installing
   ```
 2. Install dependencies
   `npm install`
-3. Install mongodb
-  `brew install mongodb` or http://docs.mongodb.org/manual/installation/
 
 Running
 -------
