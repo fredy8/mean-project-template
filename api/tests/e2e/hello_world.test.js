@@ -9,7 +9,7 @@ describe('Hello World API', function () {
 	var base = 'http://localhost:3000/api';
 
 	it('should return hello world greeting', function (done) {
-		rest.get(base + '/helloworld').on('success', function (data) {
+		rest.get(base + '/greeting').on('success', function (data) {
 			assert.equal(data.greeting, 'Hello World');
 			done();
 		});

@@ -8,7 +8,7 @@ describe('app.api module', function () {
 	beforeEach(inject(function (_$httpBackend_, _api_) {
 		$httpBackend = _$httpBackend_;
 		api = _api_;
-		$httpBackend.when('GET', '/api/helloworld')
+		$httpBackend.when('GET', '/api/greeting')
 		.respond({ greeting: 'hello' });
 	}));
 
@@ -23,7 +23,7 @@ describe('app.api module', function () {
 		});
 
 		it('should call the api', function () {
-			$httpBackend.expectGET('/api/helloworld');
+			$httpBackend.expectGET('/api/greeting');
 			api.getGreeting();
 			$httpBackend.flush();
 			$httpBackend.verifyNoOutstandingExpectation();
@@ -42,7 +42,7 @@ describe('app.api module', function () {
 		});
 
 		it('should return an error object', function () {
-			$httpBackend.when('GET', '/getGreeting')
+			$httpBackend.when('GET', '/greeting')
 			.respond(404, { error: 'Not Found.' });
 			api.getGreeting()
 			.success(function () {})

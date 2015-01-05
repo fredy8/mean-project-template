@@ -6,7 +6,7 @@ angular.module('app.api', ['ngRoute'])
 	var api = {};
 
 	api.getGreeting = function () {
-		return $http.get('/api/helloworld');
+		return $http.get('/api/greeting');
 	};
 
 	return api;
