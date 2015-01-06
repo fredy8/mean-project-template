@@ -52,8 +52,9 @@ var startServer = function () {
 	});
 };
 
-
 if (app.get('env') === 'development') {
+	console.log('Starting server in %s mode on port %d', app.get('env'),
+			app.get('port'));
 	startServer();
 } else if (app.get('env') === 'production') {
 	require('./server/cluster-launcher.js')(startServer, function () {

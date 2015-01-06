@@ -2,8 +2,12 @@
 
 angular.module('app', [
 	'ngRoute',
-	'app.helloworld',
+	'ngResource',
+	'app.greeter',
+	'app.helloworld'
 ])
-.config(['$routeProvider', function ($routeProvider) {
+.config(['$routeProvider', '$resourceProvider',
+	function ($routeProvider, $resourceProvider) {
 	$routeProvider.otherwise({ redirectTo: '/helloworld' });
+	$resourceProvider.defaults.stripTrailingSlashes = false;
 }]);

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.helloworld', ['ngRoute', 'app.api'])
+angular.module('app.helloworld', ['ngRoute', 'app.greeter'])
 
 .config(['$routeProvider', function ($routeProvider) {
 	$routeProvider.when('/helloworld', {
@@ -9,11 +9,8 @@ angular.module('app.helloworld', ['ngRoute', 'app.api'])
 	});
 }])
 
-.controller('helloWorldCtrl', ['$scope', 'api', function ($scope, api) {
-	api.getGreeting()
-	.success(function (data) {
+.controller('helloWorldCtrl', ['$scope', 'Greeter',function ($scope, Greeter) {
+	var data = Greeter.get(function () {
 		$scope.greeting = data.greeting;
-	}).error(function (err) {
-		$scope.greeting = 'Error :(';
 	});
 }]);
