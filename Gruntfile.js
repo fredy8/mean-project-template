@@ -57,9 +57,6 @@ module.exports = function (grunt) {
 				cmd: './node_modules/karma/bin/karma start angular-app' +
 					'/tests/karma.conf.js --single-run'
 			},
-			clear: {
-				cmd: 'clear'
-			},
 			deleteBinFiles: {
 				cmd: 'rm -R public/js; rm -R public/css;' + 
 					'mkdir public/js public/css'
@@ -132,7 +129,7 @@ module.exports = function (grunt) {
 				files: ['<%= jshint.server %>',
 						'<%= jshint.api %>',
 						'<%= jshint.frontend %>'],
-				tasks: ['exec:clear', 'csslint', 'jshint'/*, 'lint_pattern'*/]
+				tasks: ['csslint', 'jshint'/*, 'lint_pattern'*/]
 			}
 		},
 		nodemon: {

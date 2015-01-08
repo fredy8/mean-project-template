@@ -28,13 +28,8 @@ Template/
 |   `-- css/                    # App css (angular-app/css is bundled and minified to this directory, do NOT modify).
 |   `-- img/                    # Statically served images and icons
 |   `-- js/                     # App js (angular-app is bundled and minified to this directory, do NOT modify).
-|   `-- views/                  # Contains static html files include angular app views
 |   `-- index.html
 |-- server/                     # Server related functionality
-|   `-- cluster-launcher.js     # Lanches the server using clusters to make use of multiple cores
-|   `-- credentials.js          # Contains server credentials (e.g. db string, cookiesecrect, etc.)
-|   `-- error-handlers.js       # Error routes for the server
-|   `-- error-shutdown.js       # Gracefully shuts down the server when uncaught exceptions occur
 |-- .bowerrc                    # Bower options
 |-- .csslintrc                  # css linting options
 |-- .jshintrc                   # js linting options
@@ -67,7 +62,9 @@ Installing
   cd [my_project_name]
   ```
 2. Install dependencies
+  
   `npm install`
+  `sudo npm install grunt -g`
 
 Running
 -------
