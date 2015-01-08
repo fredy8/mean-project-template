@@ -2,33 +2,34 @@ Directory Layout
 ----------------
 ```
 Template/
-|-- angular-app/                # Contains the angular application components
-|   `-- controllers/
+|-- angular-app/                # Angular application components
 |   `-- css/
-|   `-- directives/
-|   `-- factories/
-|   `-- filters/
-|   `-- tests/
-|       `-- e2e/                # End to end tests
-|       `-- unit/               # Unit tests
-|       `-- karma.conf.js       # Karma configuration for unit tests
-|       `-- protractor.conf.js  # Protractor configuration for e2e tests
-|-- api/                        # Contains the API components
-|   `-- controllers/            # Contains modules which define the API functionality
+|   `-- js/
+|       `-- app/                # Views and controllers separated by feature (The views here are statically served to the client).
+|       `-- common/
+|           `-- directives/     # Custom directives
+|           `-- resources/      # Resources (ngResource)
+|           `-- services/       # Services (consts, values, services, factories and providers)
+|       `-- tests/
+|           `-- conf/
+|           `-- e2e/
+|           `-- unit/
+|-- api/                        # API components
+|   `-- controllers/            # Modules which define the API functionality
 |   `-- models/                 # DB models
 |   `-- routes/                 # Contains route file which hook up routes with controllers
-|       `-- main.js             # The main route, hooked up to /api/
+|       `-- main.js             # The main route, mounted to /api/
 |   `-- tests/
-|       `-- e2e                 # API end to end tests (uses mocha)
-|       `-- unit                # API unit tests (uses mocha)
+|       `-- e2e
+|       `-- unit
 |-- node_modules/               # external modules used in the application
-|-- public/                     # Static files served
-|   `-- bower_components/       # External libraries
+|-- public/                     # Statically served files
+|   `-- bower_components/       # External front end components
 |   `-- css/                    # App css (angular-app/css is bundled and minified to this directory, do NOT modify).
-|   `-- img/
+|   `-- img/                    # Statically served images and icons
 |   `-- js/                     # App js (angular-app is bundled and minified to this directory, do NOT modify).
 |   `-- views/                  # Contains static html files include angular app views
-|   `-- index.html              # Bootstraps the angular app and asynchronously fetches js scripts.
+|   `-- index.html
 |-- server/                     # Server related functionality
 |   `-- cluster-launcher.js     # Lanches the server using clusters to make use of multiple cores
 |   `-- credentials.js          # Contains server credentials (e.g. db string, cookiesecrect, etc.)
@@ -73,7 +74,7 @@ Running
 
 1. Start the database
   `sudo mongod`
-2. Run the server
+2. Start the server
   `npm start`
 
 Testing
@@ -98,6 +99,10 @@ Developing
 Debugging
 ---------
 ### Backend
+install node inspector:
+```sudo npm install node-inspector -g```
+run node inspector:
+```node-inspector```
 When the server is running, just go to http://localhost:8080/debug?port=5858.
 
 ### Frontend

@@ -1,11 +1,8 @@
 'use strict';
 
 var angularFiles = [
-	'angular-app/app.js',
-	'angular-app/controllers/**/*.js',
-	'angular-app/directives/**/*.js',
-	'angular-app/filters/**/*.js',
-	'angular-app/factories/**/*.js'
+	'angular-app/js/app/**/*.js',
+	'angular-app/js/app/**/*.js'
 ];
 
 module.exports = function (grunt) {

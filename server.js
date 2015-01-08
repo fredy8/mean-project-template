@@ -14,8 +14,6 @@ var server;
 app.use(require('./server/error-shutdown')(5000, server));
 // app.use(require('serve-favicon')(__dirname + '/public/favicon.ico'));
 
-
-
 if (app.get('env') === 'development') {
 	app.use(require('morgan')('dev'));
 } else if (app.get('env') === 'production') {
@@ -26,7 +24,6 @@ if (app.get('env') === 'development') {
 app.use(require('compression')());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(require('method-override')('X-HTTP-Method-Override'));
 app.use(require('cookie-parser')(credentials.cookieSecret));
 app.use(require('express-session')({
 	store: sessionStore,
@@ -35,7 +32,7 @@ app.use(require('express-session')({
 	saveUninitialized: true
 }));
 app.use(require('csurf')());
-app.use(express.static(__dirname + '/public'));
+require('./server/serve-static')(app);
 
 app.use('/api', require('./api/routes/main'));
 require('./server/error-handlers')(app);

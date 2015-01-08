@@ -1,3 +1,6 @@
 exports.getHelloWorld = function () {
-	return { greeting: 'Hello World' };
+	var greeting = { greeting: 'Hello World' };
+	return function (req, res) {
+		res.send(greeting);
+	}
 };

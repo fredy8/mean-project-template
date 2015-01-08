@@ -6,12 +6,11 @@
   "scripts": {
     "prestart": "npm install",
     "start": "grunt nodemon",
-    "postinstall": "bower install; npm run update-index-async; webdriver-manager update",
+    "postinstall": "bower install; npm run ; webdriver-manager update",
     "pretest": "npm install",
     "test": "grunt test",
     "watch": "grunt watch",
-    "bundle": "grunt bundle",
-    "update-index-async": "node -e \"require('shelljs/global'); sed('-i', /\\/\\/@@NG_LOADER_START@@[\\s\\S]*\\/\\/@@NG_LOADER_END@@/, '//@@NG_LOADER_START@@\\n' + sed(/sourceMappingURL=angular-loader.min.js.map/,'sourceMappingURL=bower_components/angular-loader/angular-loader.min.js.map','public/bower_components/angular-loader/angular-loader.min.js') + '\\n//@@NG_LOADER_END@@', 'public/index.html');\""
+    "bundle": "grunt bundle"
   },
   "repository": {
     "type": "git",
@@ -32,7 +31,6 @@
     "express-session": "^1.9.3",
     "express-validator": "^2.8.0",
     "media-typer": "^0.3.0",
-    "method-override": "^2.3.1",
     "mongoose": "^3.8.21",
     "serve-favicon": "^2.2.0",
     "session-mongoose": "^0.5.2"

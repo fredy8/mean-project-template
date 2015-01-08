@@ -1,0 +1,25 @@
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+	<h1 class="page-header">Proyectos</h1>
+	<div class="table-responsive">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Fase</th>
+					<th>Estado</th>
+					<th>Monto</th>
+					<th>Responsable</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="project in projects">
+					<td>{{ project.name }}</td>
+					<td>{{ project.stage }}</td>
+					<td>{{ project.status }}</td>
+					<td>{{ project.amount | currency }}</td>
+					<td>{{ project.inCharge }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
